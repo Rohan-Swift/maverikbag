@@ -1966,7 +1966,7 @@ input:-internal-autofill-selected {
 @media (max-width: 991px) {
 	.banner_part {
 		height: 700px;
-		background-image: url(../img/tab_banner.jpg);
+		background-image: url(css_images/bg.jpg);
 		background-position: left
 	}
 }
