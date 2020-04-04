@@ -180,7 +180,9 @@
 					<div class="col-lg-6 col-md-12 text-center about_left">
 						<div class="about_thumb">
                             <br><br><br><br><br><br>
-							<img src="{% static 'img/1.jpg' %}" class="img-fluid" alt="">
+                            {% for t in team %}
+							<img src="{{  t.img.url  }}" class="img-fluid" alt="">
+                            {% endfor %}
 						</div>
 					</div>
 					<div class="col-lg-6 col-md-12 about_right">

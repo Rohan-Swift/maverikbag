@@ -2,7 +2,7 @@ import smtplib
 from django.shortcuts import render
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from home.models import Counting, Volunteer, Pay, Email, Image
+from home.models import Counting, Volunteer, Pay, Email, Image, TeamPic
 
 
 def home(request):
@@ -10,7 +10,8 @@ def home(request):
     count = Counting.objects.all()
     volunteer = Volunteer.objects.all().order_by('-id')
     images = Image.objects.all().order_by('-id')
-    return render(request, 'home.html', {'count': count, 'volunteer': volunteer, 'pay': pay, 'images': images})
+    team = TeamPic.objects.all()
+    return render(request, 'home.html', {'count': count, 'volunteer': volunteer, 'pay': pay, 'images': images, 'team': team})
 
 
 def payhelp(request):
@@ -50,8 +51,9 @@ def payhelp(request):
     count = Counting.objects.all()
     volunteer = Volunteer.objects.all().order_by('-id')
     images = Image.objects.all().order_by('-id')
-    return render(request, 'home.html', {'count': count, 'volunteer': volunteer, 'pay': pay, 'images': images})
-
+    team = TeamPic.objects.all()
+    return render(request, 'home.html',
+                  {'count': count, 'volunteer': volunteer, 'pay': pay, 'images': images, 'team': team})
 
 def denim(request):
     name = request.POST['name']
@@ -90,4 +92,6 @@ def denim(request):
     count = Counting.objects.all()
     volunteer = Volunteer.objects.all().order_by('-id')
     images = Image.objects.all().order_by('-id')
-    return render(request, 'home.html', {'count': count, 'volunteer': volunteer, 'pay': pay, 'images': images})
+    team = TeamPic.objects.all()
+    return render(request, 'home.html',
+                  {'count': count, 'volunteer': volunteer, 'pay': pay, 'images': images, 'team': team})
