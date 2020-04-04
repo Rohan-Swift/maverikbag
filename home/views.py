@@ -23,8 +23,7 @@ def payhelp(request):
 
     smtpServer = 'smtp.gmail.com'
     subject = 'Thank you for contacting Maverick!'
-    message = "Dear "+name+",\nWe have received your details, we will contact you soon!\nThank You!\n\n\nInstagram: https://instagram.com/maverick_foundation\nFacebook: https://www.facebook.com/maverickbag/\nWebsite: "
-
+    message = "Dear "+name+",\nWe have received your details, we will contact you soon!\nThank You!\n\n\nInstagram: https://instagram.com/maverick_foundation\nFacebook: https://www.facebook.com/maverickbag/\nWebsite: https://maverickfoundation.herokuapp.com/ "
     msg = MIMEMultipart()
     msg['From'] = fromEmail[0].email
     msg['To'] = email
@@ -64,7 +63,7 @@ def denim(request):
 
     smtpServer = 'smtp.gmail.com'
     subject = 'Thank you for contacting Maverick!'
-    message = "Dear "+name+",\nWe have received your details, we will contact you soon!\nThank You!\n\n\nInstagram: https://instagram.com/maverick_foundation\nFacebook: https://www.facebook.com/maverickbag/\nWebsite: "
+    message = "Dear "+name+",\nWe have received your details, we will contact you soon!\nThank You!\n\n\nInstagram: https://instagram.com/maverick_foundation\nFacebook: https://www.facebook.com/maverickbag/\nWebsite: https://maverickfoundation.herokuapp.com/ "
 
     msg = MIMEMultipart()
     msg['From'] = fromEmail[0].email
